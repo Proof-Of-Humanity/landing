@@ -1,0 +1,22 @@
+@use "@styles/media";
+
+.main {
+    position: relative;
+    padding-bottom: 200px;
+    background: linear-gradient(180deg, white 0%, hsla(30, 25%, 98%, 1) 50%);
+
+    > img {
+        width: 100%;
+        height: fit-content;
+        padding: 12px;
+        margin: auto;
+    }
+
+    @include media.bp("desktop") {
+        > img {
+            width: auto;
+            padding: 0;
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+$primary: hsla(47, 100%, 50%, 1);
+$primary-hover: hsla(36, 100%, 50%, 1);
+
+$text-primary: hsla(0, 0%, 20%, 1);
+$text-secondary: hsla(0, 0%, 60%, 1);
+
+$stroke: hsla(0, 0%, 90%, 1);
+$background: hsla(30, 25%, 98%, 1);
+
+$use-case-gradient:
+    linear-gradient(
+        180deg,
+        hsla(48, 100%, 97%, 1) 0%,
+        hsla(0, 0%, 100%, 1) 100%
+    );

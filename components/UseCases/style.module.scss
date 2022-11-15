@@ -1,0 +1,78 @@
+@use "@styles/colors";
+@use "@styles/media";
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 84px;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 10%;
+        height: 80%;
+        width: 150%;
+        z-index: -1;
+        
+        background: colors.$background;
+        transform: rotate(-12deg);
+    }
+    
+    @include media.bp("desktop") {
+        margin-bottom: 200px;
+
+        &::before {
+            top: 20%;
+        }
+    }
+}
+
+.grid {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1em;
+    list-style: none;
+
+    @include media.bp("desktop") {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+.item {
+    width: 184px;
+    height: 184px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
+    
+    border: 1px solid colors.$stroke;
+    border-radius: 1000px;
+    
+    background: colors.$use-case-gradient;
+    box-shadow: 0px 2px 3px hsla(0, 0%, 0%, 0.06);
+
+    // font-size: 0.9em;
+    
+    img {
+        align-self: end;
+        transform: scale(0.8);
+    }
+    
+    span {
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    @include media.bp("desktop") {
+        width: 230px;
+        height: 230px;
+        gap: 15px;
+    }
+}
