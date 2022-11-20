@@ -36,8 +36,16 @@ nav {
   justify-content: space-between;
   padding: 12px 20px;
   
+  @include media.bp("tablet-small") {
+    padding: 17px 64px;
+  }
+  
   @include media.bp("desktop") {
-    padding: 17px 49px;
+    padding: 17px 80px;
+  }
+
+  @include media.bp("desktop-wide") {
+    padding: 17px 192px;
   }
 }
 
@@ -84,6 +92,18 @@ footer {
       display: flex;
       align-items: center;
     }
+  }
+
+  @include media.bp("tablet-small") {
+    padding: 24px 64px;
+  }
+
+  @include media.bp("desktop") {
+    padding: 24px 80px;
+  }
+
+  @include media.bp("desktop-wide") {
+    padding: 24px 192px;
   }
 }
 
