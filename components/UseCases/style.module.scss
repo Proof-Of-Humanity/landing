@@ -38,7 +38,7 @@
     gap: 1em;
     list-style: none;
 
-    @include media.bp("desktop") {
+    @include media.bp("tablet-wide") {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }

@@ -5,6 +5,7 @@ import ChallengeIcon from "../../assets/icons/process/icon3.svg";
 import POHLogo from "../../assets/icons/logo.svg";
 import Image, { StaticImageData } from "next/image";
 import style from "./style.module.scss";
+import Link from "next/link";
 
 interface ItemProps {
   icon: StaticImageData;
@@ -47,7 +48,12 @@ const Process: React.FC = () => (
         <Image src={POHLogo} alt="Proof of Humanity" />
         <span>Learn More</span>
       </div>
-      <button>Read the Guide</button>
+      <Link
+        href="https://blog.kleros.io/proof-of-humanity-an-explainer/"
+        target="_blank"
+      >
+        <button>Read the Guide</button>
+      </Link>
     </div>
   </section>
 );

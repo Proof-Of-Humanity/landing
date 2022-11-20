@@ -5,6 +5,7 @@ import style from "./style.module.scss";
 import ReactPlayer from "react-player";
 import { useState } from "react";
 import cn from "classnames";
+import Link from "next/link";
 
 const Display: React.FC = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -23,7 +24,9 @@ const Display: React.FC = () => {
         </p>
 
         <div className={style.action}>
-          <button>Create your profile</button>
+          <Link className="link-button" href="http://app.proofofhumanity.id">
+            Create your profile
+          </Link>
           <button onClick={() => setShowVideo(true)}>
             <Image src={PlayIcon} width="16" height="20" alt="play" />
             Intro
@@ -32,7 +35,9 @@ const Display: React.FC = () => {
 
         <span className={cn(style.builtby, "kleros")}>
           <span>Built by</span>
-          <Image src={KlerosLogo} alt="kleros" />
+          <Link href="http://kleros.io" target="_blank">
+            <Image src={KlerosLogo} alt="kleros" />
+          </Link>
         </span>
       </div>
 

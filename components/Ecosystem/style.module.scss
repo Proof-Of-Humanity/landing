@@ -39,7 +39,7 @@
         height: fit-content;
     }
 
-    @include media.bp("desktop") {
+    @include media.bp("tablet") {
         margin-top: 80px;
         flex-direction: row;
     }
@@ -64,22 +64,25 @@
         place-self: center;
     }
 
-    @include media.bp("desktop") {
+    @include media.bp("tablet") {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        gap: 21px;
-        
+
         &.left > :first-child {
             grid-column: 1;
             grid-row: 1 / 4;
             place-self: center;
         }
-        
+
         &.right > :last-child {
             grid-column: 2;
             grid-row: 1 / 4;
             place-self: center;
         }
+    }
+
+    @include media.bp("desktop") {
+        gap: 21px;
     }
 }
 
@@ -94,8 +97,6 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: $item-size;
-        height: $item-size;
         margin: -($item-size / 2);
 
         $angle: (360 / $item-count);
@@ -108,11 +109,9 @@
         }
 
         &.big {
-            $item-size: 2 * $item-size;
-
-            width: $item-size;
-            height: $item-size;
-            margin: -($item-size / 2);
+            width: 2 * $item-size;
+            height: 2 * $item-size;
+            margin: -$item-size;
 
             outline: 3px solid colors.$primary;
             outline-offset: - $circle-size / 20;
@@ -126,6 +125,12 @@
 
     @include on-circle($item-count: 10, $circle-size: 316px, $item-size: 92px, $rotation: 288);
     
+    @include media.bp("tablet") {
+        margin: 0 40px;
+
+        @include on-circle($item-count: 10, $circle-size: 316px, $item-size: 92px, $rotation: 270);
+    }
+
     @include media.bp("desktop") {
         margin: 0 67px;
 
@@ -146,5 +151,13 @@
     @include media.bp("desktop") {
         width: 135px;
         height: 135px;
+    }
+
+    > a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

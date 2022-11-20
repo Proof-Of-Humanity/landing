@@ -20,32 +20,3 @@ $breakpoints: (
         }
     }
 }
-
-// $sm-bp: 640px;
-// $md-bp: 1024px;
-// $lg-bp: 1248px;
-// $xl-bp: 1440px;
-
-// @mixin sm {
-//   @media (min-width: #{$sm-bp}) and (max-width: #{$md-bp - 1px}) {
-//     @content;
-//   }
-// }
-
-// @mixin md {
-//   @media (min-width: #{$md-bp}) and (max-width: #{$lg-bp - 1px}) {
-//     @content;
-//   }
-// }
-
-// @mixin lg {
-//   @media (min-width: #{$md-bp}) and (max-width: #{$lg-bp - 1px}) {
-//     @content;
-//   }
-// }
-
-// @mixin xl {
-//   @media (min-width: #{$lg-bp}) {
-//     @content;
-//   }
-// }
