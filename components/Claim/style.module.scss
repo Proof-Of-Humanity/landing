@@ -1,3 +1,4 @@
+@use "@styles/colors";
 @use "@styles/media";
 
 .main {
@@ -18,5 +19,16 @@
             padding: 0;
             margin: auto;
         }
+    }
+}
+
+.title {
+    color: colors.$primary;
+    padding-top: 40px;
+    margin-bottom: 20px;
+
+    @include media.bp("desktop") {
+        padding-top: 60px;
+        margin-bottom: 60px;
     }
 }

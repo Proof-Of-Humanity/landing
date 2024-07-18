@@ -1,5 +1,4 @@
-import SectionTitle from "../SectionTitle";
-import POHLogo from "@assets/icons/logo.svg";
+import POHV2LogoWithText from "@assets/icons/white-poh-v2-logo-with-text.svg";
 import Image from "next/image";
 import style from "./style.module.scss";
 import AcceptIcon from "@assets/icons/accept.svg";
@@ -26,7 +25,9 @@ const ProsCons: React.FC<ProsConsProps> = ({ pros, cons }) => (
 
 const Identity: React.FC = () => (
   <section className={style.main}>
-    <SectionTitle upper="Your" lower="Digital Identity" />
+    <h1 className={style.title}>
+      <strong>Your Digital Identity</strong>
+    </h1>
 
     <div className={style.grid}>
       <h2>Digital Government IDs</h2>
@@ -48,11 +49,8 @@ const Identity: React.FC = () => (
       />
 
       <div className={style.ours}>
-        <div className={style.title}>
-          <h2>Proof Of Humanity</h2>
-          <div className={style.logo}>
-            <Image src={POHLogo} alt="Proof of Humanity" />
-          </div>
+        <div className={style.logo}>
+          <Image src={POHV2LogoWithText} alt="Proof of Humanity" />
         </div>
         <ProsCons
           pros="Decentralized, AI-resistant, and economically incentivized."

@@ -1,4 +1,3 @@
-import SectionTitle from "@components/SectionTitle";
 import style from "./style.module.scss";
 import Image from "next/image";
 import UseCase1 from "@assets/icons/use-cases/uc1.svg";
@@ -24,7 +23,9 @@ const Item: React.FC<ItemProps> = ({ icon, label }) => (
 
 const UseCases: React.FC = () => (
   <section className={style.main}>
-    <SectionTitle upper="Unlocking" lower="New Possibilities" />
+    <h1 className={style.title}>
+      <strong>Use Cases</strong>
+    </h1>
 
     <ul className={style.grid}>
       <Item icon={UseCase1} label="Human DAO" />

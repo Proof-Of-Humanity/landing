@@ -2,12 +2,15 @@
 @use "@styles/media";
 
 .main {
-    margin-bottom: 144px;
-    
-    @include media.bp("desktop") {
-        margin-bottom: 200px;
-    }
+    margin-bottom: 80px;
 }
+
+.title {
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+    color: colors.$primary;
+  }
 
 .grid {
     margin: auto;
@@ -48,11 +51,12 @@
     }
     
     @include media.bp("desktop") {
-        width: 426px;
-        padding: 32px;
+        width: 372px;
+        padding: 24px;
         
         p {
             margin: 12px 0;
+            margin-bottom: 32px;
         }
 
         img {

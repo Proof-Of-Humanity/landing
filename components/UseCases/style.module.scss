@@ -2,7 +2,6 @@
 @use "@styles/media";
 
 .main {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,21 +10,24 @@
     &::before {
         content: "";
         position: absolute;
-        display: block;
-        top: 10%;
-        height: 80%;
-        width: 150%;
+        height: 900px;
+        width: 100%;
         z-index: -1;
-        
-        background: colors.$background;
-        transform: rotate(-12deg);
+        background: colors.$launch-button-gradient;
+    }
+
+    @include media.bp("tablet-small") {
+        &::before {
+            height: 532px;
+        }
     }
     
     @include media.bp("desktop") {
         margin-bottom: 200px;
 
         &::before {
-            top: 20%;
+            height: 760px;
+            width: 100%;
         }
     }
 }
@@ -45,15 +47,15 @@
 }
 
 .item {
-    width: 184px;
-    height: 184px;
+    width: 164px;
+    height: 164px;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    gap: 12px;
+    gap: 0px;
     
     border: 1px solid colors.$stroke;
-    border-radius: 1000px;
+    border-radius: 50%;
     
     background: colors.$use-case-gradient;
     box-shadow: 0px 2px 3px hsla(0, 0%, 0%, 0.06);
@@ -68,11 +70,27 @@
     span {
         font-weight: 600;
         text-align: center;
+        width: 80px;
     }
     
     @include media.bp("desktop") {
         width: 230px;
         height: 230px;
         gap: 15px;
+
+        span {
+            width: auto;
+        }
+    }
+}
+
+.title {
+    color: white;
+    padding-top: 40px;
+    margin-bottom: 20px;
+
+    @include media.bp("desktop") {
+        padding-top: 60px;
+        margin-bottom: 60px;
     }
 }

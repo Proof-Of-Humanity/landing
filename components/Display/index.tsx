@@ -18,14 +18,13 @@ const Display: React.FC = () => {
         </h1>
 
         <p className={style.text}>
-          Proof of Humanity, a system combining webs of trust, with reverse
-          Turing tests, and dispute resolution to create a sybil-proof list of
-          humans.
+          Proof of Humanity is a system designed to create a trusted list of
+          humans verified by a decentralized community.
         </p>
 
         <div className={style.action}>
           <Link className="link-button" href="http://app.proofofhumanity.id">
-            Create your profile
+            Register Now
           </Link>
           <button onClick={() => setShowVideo(true)}>
             <Image src={PlayIcon} width="16" height="20" alt="play" />

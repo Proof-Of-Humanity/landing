@@ -6,41 +6,42 @@
     width: 100%;
     height: calc(100vh - 82px);
     padding: 0 16px;
-    margin-bottom: 64px;
 
     &::before {
         content: "";
         position: absolute;
-        display: block;
+        display: flex;
         height: 100%;
         width: 100%;
         right: 0;
-        bottom: -70px;
+        margin-top: 248px;
         z-index: -1;
         background-image: url("../../assets/poster.png");
         background-repeat: no-repeat;
-        background-position: right;
         background-size: 100%;
     }
 
     @include media.bp("tablet-small") {
         margin: 0 64px 64px;
-        padding: 0 0 312px;
 
         &::before {
             width: 70%;
+            margin-top: 0;
+            margin-right: 0;
         }
     }
 
     @include media.bp("desktop") {
         height: auto;
         margin: 0 64px 64px;
-        padding: 100px 0 312px 16px;
+        padding: 100px 0 132px 16px;
 
         &::before {
             width: 50%;
             top: 0;
             bottom: auto;
+            margin-top: 60px;
+            margin-right: 80px;
         }
     }
 
@@ -52,7 +53,7 @@
 .content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     
     @include media.bp("tablet-small") {
         width: 60%;
@@ -64,6 +65,7 @@
 
     @include media.bp("desktop") {
         width: 30%;
+        align-items: flex-start;
     }
 }
 
@@ -72,6 +74,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin: 32px 0 10px;
+    line-height: 1.2;
     
     font-size: 3.5em;
     color: colors.$text-primary;
@@ -89,8 +92,13 @@
 
 .text {
     color: colors.$text-secondary;
-    margin-bottom: 40px;
+    margin: 0 0 32px 0;
     background: radial-gradient(50% 50% at 50% 50%, white 50%, hsla(0, 0%, 100%, 0.50) 90%, transparent 100%);
+    text-align: center;
+
+    @include media.bp("desktop") {
+        text-align: left;
+    }
 }
 
 .action {
@@ -111,7 +119,7 @@
 
 .builtby {
     position: absolute;
-    right: 10%;
+    left: 13%;
     bottom: 36px;
 
     @include media.bp("tablet-small") {

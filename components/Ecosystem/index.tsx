@@ -1,4 +1,3 @@
-import SectionTitle from "../SectionTitle";
 import EtherscoreLogo from "@assets/icons/ecosystem/Etherscore.png";
 import FyreLogo from "@assets/icons/ecosystem/Fyre.png";
 import GalxeLogo from "@assets/icons/ecosystem/Galxe.png";
@@ -17,7 +16,7 @@ import UBILogo from "@assets/icons/ecosystem/UBI.png";
 import WallIDLogo from "@assets/icons/ecosystem/WallID.png";
 import WeLookLogo from "@assets/icons/ecosystem/WeLook.png";
 import PlusIcon from "@assets/icons/plus.svg";
-import POHLogo from "@assets/icons/logo-vertical.svg";
+import POHLogo from "@assets/icons/poh-v2-logo-vertical.svg";
 import Image, { StaticImageData } from "next/image";
 import cn from "classnames";
 import style from "./style.module.scss";
@@ -44,7 +43,9 @@ const Item: React.FC<ItemProps> = ({ logo, alt, big, link }) => (
 
 const Ecosystem: React.FC = () => (
   <section className={style.main}>
-    <SectionTitle upper="Growing" lower="Ecosystem" />
+    <h1 className={style.title}>
+      <strong>Our Growing Ecosystem</strong>
+    </h1>
 
     <div className={style.grid}>
       <div className={cn(style.side, style.left)}>
@@ -90,7 +91,6 @@ const Ecosystem: React.FC = () => (
         <Item logo={MazuriLogo} alt="Mazuri" link="https://mazury.xyz" />
         <Item logo={LensterLogo} alt="Lenster" link="https://lenster.xyz" />
         <Item logo={GalxeLogo} alt="Galxe" link="https://galxe.com" />
-
         <Item logo={PlusIcon} alt="Add yours" />
       </div>
     </div>

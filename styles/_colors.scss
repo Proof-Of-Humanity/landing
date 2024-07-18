@@ -1,8 +1,12 @@
-$primary: hsla(47, 100%, 50%, 1);
+$primary: #ff8c54;
 $primary-hover: hsla(36, 100%, 50%, 1);
+
+$secondary-orange: #ff946c;
 
 $text-primary: hsla(0, 0%, 20%, 1);
 $text-secondary: hsla(0, 0%, 60%, 1);
+
+$primary-purple: #9414fc;
 
 $stroke: hsla(0, 0%, 90%, 1);
 $background: hsla(30, 25%, 98%, 1);
@@ -13,3 +17,7 @@ $use-case-gradient:
         hsla(48, 100%, 97%, 1) 0%,
         hsla(0, 0%, 100%, 1) 100%
     );
+
+$launch-button-gradient: linear-gradient(90deg, #9454f4 0%, #ff8c54 100%);
+$launch-button-gradient-hover: linear-gradient(90deg, #7a3cc4 0%, #ff6c24 100%);
+

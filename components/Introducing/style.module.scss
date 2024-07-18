@@ -1,0 +1,117 @@
+@use "@styles/colors";
+@use "@styles/media";
+
+.main {
+  margin-bottom: 84px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1032px;
+    width: 100%;
+    z-index: -1;
+    background: colors.$launch-button-gradient;
+  }
+
+  @include media.bp("tablet-small") {
+    &::before {
+      height: 940px;
+    }
+  }
+
+  @include media.bp("tablet-wide") {
+    &::before {
+      height: 852px;
+    }
+  }
+
+  @include media.bp("tablet") {
+    &::before {
+      height: 900px;
+    }
+  }
+
+  @include media.bp("desktop") {
+    &::before {
+      height: 700px;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  padding-top: 40px;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  width: 300px;
+  margin-bottom: 40px;
+
+  @include media.bp("desktop") {
+    width: 540px;
+  }
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin: 20px 32px;
+  color: white;
+  text-align: center;
+  flex-direction: column;
+
+  &.alignLeft {
+    flex-direction: column;
+
+    @include media.bp("desktop") {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+
+  &.alignRight {
+    flex-direction: column-reverse;
+
+    @include media.bp("desktop") {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+  }
+
+  @include media.bp("desktop") {
+    margin: 40px 160px;
+  }
+}
+
+.featureTitle {
+  font-size: 28px;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1.2px white;
+  text-align: left;
+
+  @include media.bp("desktop") {
+    font-size: 36px;
+    -webkit-text-stroke: 1.5px white;
+  }
+}
+
+.divider {
+  width: 4px;
+  height: 60px;
+  background-color: #9414fc;
+  margin: 20px 0;
+
+  @include media.bp("desktop") {
+    height: 140px;
+    margin: 0 40px;
+  }
+}
+
+.featureDescription {
+  max-width: 100%;
+
+  @include media.bp("desktop") {
+    max-width: 700px;
+  }
+}

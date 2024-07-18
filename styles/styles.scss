@@ -196,6 +196,14 @@ button, .link-button {
     background: colors.$primary-hover;
     cursor: pointer;
   }
+
+  &.launch-button {
+    background: colors.$launch-button-gradient;
+
+    &:hover {
+      background: colors.$launch-button-gradient-hover;
+    }
+  }
 }
 
 .kleros {
