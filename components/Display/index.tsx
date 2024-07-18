@@ -45,6 +45,8 @@ const Display: React.FC = () => {
           <ReactPlayer
             url="https://www.youtube.com/watch?v=R4-z118s-gM"
             controls
+            width="68vw"
+            height="68vh"
           />
         </div>
       )}
