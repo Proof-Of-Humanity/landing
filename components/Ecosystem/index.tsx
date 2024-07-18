@@ -12,7 +12,6 @@ import ProofOfIntegrityLogo from "@assets/icons/ecosystem/Proof of Integrity.png
 import QLogo from "@assets/icons/ecosystem/Q.png";
 import RipioCreditLogo from "@assets/icons/ecosystem/Ripio Credit.png";
 import SismoLogo from "@assets/icons/ecosystem/Sismo.png";
-import UBILogo from "@assets/icons/ecosystem/UBI.png";
 import WallIDLogo from "@assets/icons/ecosystem/WallID.png";
 import WeLookLogo from "@assets/icons/ecosystem/WeLook.png";
 import PlusIcon from "@assets/icons/plus.svg";
@@ -74,7 +73,7 @@ const Ecosystem: React.FC = () => (
           link="https://etherscore.network"
         />
         <Item logo={GuildXYZLogo} alt="GuildXYZ" link="https://guild.xyz" />
-        <Item logo={UBILogo} alt="UBI" link="http://ubi.eth.limo" />
+        <Item logo={GalxeLogo} alt="Galxe" link="https://galxe.com" />
         <Item logo={FyreLogo} alt="Fyre" link="https://fyre.id" />
         <Item logo={WallIDLogo} alt="WallID" link="https://wallid.io" />
         <Item
@@ -90,7 +89,7 @@ const Ecosystem: React.FC = () => (
       <div className={cn(style.side, style.right)}>
         <Item logo={MazuriLogo} alt="Mazuri" link="https://mazury.xyz" />
         <Item logo={LensterLogo} alt="Lenster" link="https://lenster.xyz" />
-        <Item logo={GalxeLogo} alt="Galxe" link="https://galxe.com" />
+        <Item logo={PlusIcon} alt="Add yours" />
         <Item logo={PlusIcon} alt="Add yours" />
       </div>
     </div>
