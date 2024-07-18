@@ -2,39 +2,22 @@
 @use "@styles/media";
 
 .main {
-  margin-bottom: 84px;
+  position: relative;
+  margin-bottom: 52px;
+  padding-bottom: 60px;
 
   &::before {
     content: "";
     position: absolute;
-    height: 1032px;
+    height: 100%;
     width: 100%;
     z-index: -1;
     background: colors.$launch-button-gradient;
   }
 
-  @include media.bp("tablet-small") {
-    &::before {
-      height: 940px;
-    }
-  }
-
-  @include media.bp("tablet-wide") {
-    &::before {
-      height: 852px;
-    }
-  }
-
-  @include media.bp("tablet") {
-    &::before {
-      height: 900px;
-    }
-  }
-
   @include media.bp("desktop") {
-    &::before {
-      height: 700px;
-    }
+    padding-bottom: 120px;
+    margin-bottom: 84px;
   }
 }
 
@@ -49,6 +32,7 @@
 
   @include media.bp("desktop") {
     width: 540px;
+    padding-top: 60px;
   }
 }
 

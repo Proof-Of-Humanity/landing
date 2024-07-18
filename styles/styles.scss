@@ -139,6 +139,8 @@ section {
   margin: 48px auto 0;
   width: 95%;
   display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   justify-content: space-between;
 
   background: white;
@@ -156,6 +158,11 @@ section {
       margin: 0 10px 0 10px;
     }
   }
+
+  .linkButton {
+    margin: 0 0 0 10px;
+  }
+
 
   @include media.bp("tablet") {
     width: 770px;
