@@ -26,7 +26,7 @@ const Process: React.FC = () => (
       <strong>How It Works</strong>
     </h1>
 
-    <div className={style.grid}>
+    <div className={style.cards}>
       <Item
         icon={CreateIcon}
         text="Create Your Profile"
