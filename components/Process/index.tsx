@@ -60,6 +60,7 @@ const Process: React.FC = () => (
       <Link
         href="https://blog.kleros.io/proof-of-humanity-an-explainer/"
         target="_blank"
+        className="linkButton"
       >
         <button>TUTORIALS</button>
       </Link>

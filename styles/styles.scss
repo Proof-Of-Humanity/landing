@@ -135,13 +135,14 @@ section {
 }
 
 .guide {
-  padding: 16px;
-  margin: 48px auto 0;
-  width: 76%;
   display: flex;
+  width: 80%;
+  margin: 48px auto 0;
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
-  justify-content: space-between;
 
   background: white;
   border: 1px solid colors.$stroke;
@@ -161,6 +162,10 @@ section {
 
   .linkButton {
     margin: 0 0 0 10px;
+  }
+
+  @include media.bp("phablet") {
+    justify-content: space-between;
   }
 
 
