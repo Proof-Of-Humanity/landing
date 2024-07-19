@@ -28,12 +28,16 @@
 }
 
 .item {
-    width: 84%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 372px;
     padding: 24px;
     margin: 0 auto;
     border-radius: 24px;
     border: 1px solid colors.$stroke;
     box-shadow: 0px 2px 3px 0px hsla(0, 0%, 0%, 0.06);
+    text-align: center;
 
     img {
         margin-bottom: 20px;
@@ -41,6 +45,7 @@
 
     h2 {
         font-weight: 600;
+        margin-bottom: 12px;
     }
 
     p {
@@ -52,6 +57,8 @@
     @include media.bp("desktop") {
         width: 372px;
         padding: 24px;
+        text-align: left;
+        align-items: flex-start;
         
         p {
             margin: 12px 0;

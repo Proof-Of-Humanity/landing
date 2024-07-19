@@ -22,10 +22,18 @@
     }
 
     @include media.bp("tablet-small") {
+        height: calc(100vh + 132px);
+
         &::before {
             width: 80%;
             left: 84px;
-            top: 132px;
+            top: 140px;
+        }
+    }
+
+    @include media.bp("tablet-wide") {
+        &::before {
+            left: 120px;
         }
     }
 
