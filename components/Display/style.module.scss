@@ -4,7 +4,7 @@
 .main {
     position: relative;
     width: 100%;
-    height: calc(100vh - 82px);
+    min-height: 740px;
     padding: 0 16px;
 
     &::before {
@@ -14,15 +14,27 @@
         height: 100%;
         width: 100%;
         right: 0;
-        margin-top: 248px;
+        margin-top: 260px;
         z-index: -1;
         background-image: url("../../assets/poster.png");
         background-repeat: no-repeat;
         background-size: 100%;
     }
 
+    @include media.bp("phone") {
+        min-height: 780px;
+    }
+
+    @include media.bp("phone-wide") {
+        min-height: 840px;
+    }
+
+    @include media.bp("phablet") {
+        min-height: 920px;
+    }
+
     @include media.bp("tablet-small") {
-        height: calc(100vh + 132px);
+        height: 920px;
 
         &::before {
             width: 80%;
@@ -38,6 +50,7 @@
     }
 
     @include media.bp("desktop") {
+        min-height: calc(100vh - 82px);
         height: auto;
         margin: 0 64px 64px;
         padding: 100px 0 132px 16px;
@@ -126,7 +139,6 @@
 
 .builtby {
     position: absolute;
-    left: 13%;
     bottom: 36px;
 
     @include media.bp("tablet-small") {

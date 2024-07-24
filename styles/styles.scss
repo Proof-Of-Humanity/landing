@@ -51,29 +51,16 @@ nav {
 
 footer {
   padding: 24px;
-  display: grid;
-  grid-template-areas: 
-    "logo   social"
-    "kleros social";
+  display: flex;
+  flex-direction: column;
   place-items: center;
+  gap: 24px;
 
   border-top: 1px solid colors.$stroke;
 
-  > img {
-    grid-area: logo;
-  }
-
   .logos {
-    grid-area: social;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 24px;
-
-  }
-  
-  .kleros {
-    grid-area: kleros;
-    margin: 12px 0;
   }
   
   @include media.bp("tablet-small") {
@@ -91,6 +78,7 @@ footer {
     .logos {
       display: flex;
       align-items: center;
+      justify-content: center;
     }
   }
 
@@ -137,12 +125,12 @@ section {
 .guide {
   display: flex;
   width: 80%;
-  margin: 48px auto 0;
+  margin: 32px auto 0;
   padding: 16px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
 
   background: white;
   border: 1px solid colors.$stroke;
@@ -156,7 +144,7 @@ section {
     font-weight: 400;
     
     img {
-      margin: 0 10px 0 10px;
+      margin: 0 8px 0 0px;
     }
   }
 
@@ -174,9 +162,14 @@ section {
 
     .label {
       img {
-        margin: 0 22px 0 42px;
+        margin: 0 20px 0 42px;
       }
     }
+  }
+
+  @include media.bp("desktop") {
+    margin: 48px auto 0;
+    gap: 16px;
   }
 }
 
