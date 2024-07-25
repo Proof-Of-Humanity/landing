@@ -11,15 +11,18 @@ interface ProsConsProps {
 
 const ProsCons: React.FC<ProsConsProps> = ({ pros, cons }) => (
   <div className={style.proscons}>
-    <h2>
-      <Image src={AcceptIcon} alt="pros" /> Pros
-    </h2>
-    <p>{pros}</p>
-
-    <h2>
-      <Image src={DeclineIcon} alt="cons" /> Cons
-    </h2>
-    <p>{cons}</p>
+    <div className={style.prosItem}>
+      <h2>
+        <Image src={AcceptIcon} alt="pros" className={style.icon} /> Pros
+      </h2>
+      <p>{pros}</p>
+    </div>
+    <div className={style.consItem}>
+      <h2>
+        <Image src={DeclineIcon} alt="cons" className={style.icon} /> Cons
+      </h2>
+      <p>{cons}</p>
+    </div>
   </div>
 );
 
@@ -29,26 +32,32 @@ const Identity: React.FC = () => (
       <strong>Your Digital Identity</strong>
     </h1>
 
-    <div className={style.grid}>
-      <h2>Digital Government IDs</h2>
-      <ProsCons
-        pros="Simple and easy to scale."
-        cons="Vulnerable to rogue nation states duplicating or censoring identities."
-      />
+    <div className={style.flexContainer}>
+      <div className={style.flexItem}>
+        <h2>Digital Government IDs</h2>
+        <ProsCons
+          pros="Simple and easy to scale."
+          cons="Vulnerable to rogue nation states duplicating or censoring identities."
+        />
+      </div>
 
-      <h2>Reverse Turing Tests</h2>
-      <ProsCons
-        pros="Decentralized and still fairly simple."
-        cons="Requires all users to meet at the same time and is vulnerable to AI."
-      />
+      <div className={style.flexItem}>
+        <h2>Reverse Turing Tests</h2>
+        <ProsCons
+          pros="Decentralized and still fairly simple."
+          cons="Requires all users to meet at the same time and is vulnerable to AI."
+        />
+      </div>
 
-      <h2>Social Graph Analysis</h2>
-      <ProsCons
-        pros="Decentralized and easy to scale."
-        cons="Very complex and vulnerable to advances in AI."
-      />
+      <div className={style.flexItem}>
+        <h2>Social Graph Analysis</h2>
+        <ProsCons
+          pros="Decentralized and easy to scale."
+          cons="Very complex and vulnerable to advances in AI."
+        />
+      </div>
 
-      <div className={style.ours}>
+      <div className={`${style.flexItem} ${style.ours}`}>
         <div className={style.logo}>
           <Image src={POHV2LogoWithText} alt="Proof of Humanity" />
         </div>

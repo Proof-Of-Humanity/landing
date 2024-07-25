@@ -4,83 +4,72 @@
 .main {
   margin: 0 24px 60px;
 
-  @include media.bp("desktop-wide") {
-    margin: 0 92px 100px;
+  @include media.bp("desktop") {
+    margin: 0 64px 140px;
   }
 }
 
-.grid {
-  position: relative;
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+
+  @include media.bp("desktop") {
+    justify-content: space-between;
+  }
+}
+
+.flexItem {
+  flex: 1 1 calc(100% - 32px);
+  width: 84vw;
   padding: 24px;
-  display: grid;
-  column-gap: 48px;
-  row-gap: 16px;
+  border-radius: 24px;
+  border: 1px solid colors.$stroke;
+  background: #fff;
 
-
-  > h2 {
-    margin: 0 auto 24px;
-    color: colors.$primary-purple;
-    font-weight: 600;
-    text-align: center;
+  @include media.bp("tablet") {
+    flex: 1 1 calc(50% - 32px);
   }
 
   @include media.bp("desktop") {
-    padding: 32px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 1fr;
-    grid-auto-flow: column;
-    row-gap: 0;
-    
-    > h2 {
-      width: 200px;
-      margin: 0 0 24px;
-      text-align: left;
-    }
+    flex: 1 1 calc(25% - 32px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
   }
 
-  @include media.bp("desktop-wide") {
-    padding: 48px;
+  h2 {
+    color: colors.$primary-purple;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 16px;
+
+    @include media.bp("desktop") {
+      min-height: 60px;
+    }
   }
 }
 
 .ours {
-  // visibility: hidden;
-  width: 100%;
-  bottom: -270px;
-  padding: 32px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
   background: colors.$secondary-orange;
   color: colors.$secondary-orange;
   border-radius: 24px;
-  
-  p { 
-    color: white;
-  }
+  padding: 32px;
+  text-align: center;
 
-  h2 {
+  h2, p {
     color: white;
-  }
-  
-  @include media.bp("tablet") {
-    width: 100%;
   }
 
   @include media.bp("desktop") {
     align-items: flex-start;
-    height: 100%;
-    position: absolute;
-    width: 300px;
-    top: -40px;
-    bottom: auto;
-    right: 32px;
-  }
+    height: auto;
 
-  @include media.bp("desktop-wide") {
-    right: 32px;
-    position: absolute;
+    .proscons {
+      margin-top: 16px;
+    }
   }
 }
 
@@ -91,38 +80,55 @@
 }
 
 .logo {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 
   @include media.bp("desktop") {
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
 }
 
 .proscons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-auto-flow: column;
-  column-gap: 20px;
-  
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: space-between;
+
+  @include media.bp("desktop") {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
   h2 {
+    display: flex;
+    align-items: center;
     color: colors.$text-primary;
+    margin-bottom: 8px;
   }
   
   p {
     color: colors.$text-secondary;
+    margin: 0;
+    text-align: left;
   }
 
-  @include media.bp("desktop") {
-    grid-template-columns: auto;
-    grid-template-rows: repeat(4, auto);
-  
-    p {
-      height: 100px;
+  .prosItem, .consItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 120px;
+
+    @include media.bp("desktop") {
+      width: 100%;
     }
+  }
+
+  .icon {
+    margin-right: 8px;
   }
 }
 
 .ours .proscons p {
-  color: colors.$text-primary;
+  color: white;
 }
