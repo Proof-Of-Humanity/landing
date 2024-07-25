@@ -30,6 +30,10 @@
   width: 300px;
   margin-bottom: 40px;
 
+  @include media.bp("phablet") {
+    width: 440px;
+  }
+
   @include media.bp("desktop") {
     width: 540px;
     padding-top: 60px;
