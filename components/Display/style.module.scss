@@ -139,7 +139,18 @@
 
 .builtby {
     position: absolute;
-    bottom: 36px;
+    bottom: 32px;
+    left: 10%;
+
+    @include media.bp("phone") {
+        left: 14%;
+    }
+    @include media.bp("phone-wide") {
+        left: 20%;
+    }
+    @include media.bp("phablet") {
+        left: 24%;
+    }
 
     @include media.bp("tablet-small") {
         position: inherit;
