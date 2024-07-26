@@ -23,19 +23,22 @@
 
 .title {
   display: flex;
-  padding-top: 40px;
+  padding: 40px 40px 0 40px;
   justify-content: center;
   color: white;
   text-align: center;
-  width: 300px;
   margin-bottom: 40px;
+
+  @include media.bp("phone-wide") {
+    width: 440px;
+  }
 
   @include media.bp("phablet") {
     width: 440px;
   }
 
   @include media.bp("desktop") {
-    width: 540px;
+    width: 660px;
     padding-top: 60px;
   }
 }
@@ -59,6 +62,15 @@
 
   &.alignRight {
     flex-direction: column-reverse;
+
+    @include media.bp("desktop") {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+  }
+
+  &.alignRightMobile {
+    flex-direction: column;
 
     @include media.bp("desktop") {
       flex-direction: row-reverse;
@@ -99,9 +111,5 @@
 }
 
 .featureDescription {
-  max-width: 100%;
-
-  @include media.bp("desktop") {
-    max-width: 700px;
-  }
+  max-width: 700px;
 }

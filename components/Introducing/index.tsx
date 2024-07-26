@@ -1,8 +1,8 @@
 import React from 'react';
 import style from "./style.module.scss";
 
-const Feature: React.FC<{ title: string, description: string, align: 'left' | 'right' }> = ({ title, description, align }) => (
-  <div className={`${style.feature} ${align === 'left' ? style.alignLeft : style.alignRight}`}>
+const Feature: React.FC<{ title: string, description: string, align: 'left' | 'right' | 'rightMobile' }> = ({ title, description, align }) => (
+  <div className={`${style.feature} ${align === 'left' ? style.alignLeft : align === 'right' ? style.alignRight : style.alignRightMobile}`}>
     <h2 className={style.featureTitle}>{title}</h2>
     <div className={style.divider} />
     <p className={style.featureDescription}>{description}</p>
@@ -22,7 +22,7 @@ const Introducing: React.FC = () => (
     <Feature 
       title="Multi-chain Expansion" 
       description="Multi-chain expansion allows the system to operate across multiple blockchain networks, including Gnosis Chain, enhancing accessibility and interoperability. This feature enables users to maintain and transfer their verified identity across different chains, ensuring a seamless and versatile digital experience." 
-      align="right" 
+      align="rightMobile" 
     />
   </section>
 );

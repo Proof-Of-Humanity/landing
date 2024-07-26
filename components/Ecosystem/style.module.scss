@@ -164,9 +164,8 @@
 
 .title {
     color: white;
-    padding-top: 40px;
+    padding: 40px 20px 0 20px;
     margin-bottom: 32px;
-    width: 200px;
     text-align: center;
 
     @include media.bp("desktop") {

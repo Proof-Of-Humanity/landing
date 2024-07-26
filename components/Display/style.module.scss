@@ -2,6 +2,7 @@
 @use "@styles/media";
 
 .main {
+    display: flex;
     position: relative;
     width: 100%;
     min-height: 740px;
@@ -10,11 +11,10 @@
     &::before {
         content: "";
         position: absolute;
-        display: flex;
         height: 100%;
         width: 100%;
         right: 0;
-        margin-top: 260px;
+        margin-top: 392px;
         z-index: -1;
         background-image: url("../../assets/poster.png");
         background-repeat: no-repeat;
@@ -22,30 +22,21 @@
     }
 
     @include media.bp("phone") {
-        min-height: 780px;
+        min-height: 820px;
     }
 
     @include media.bp("phone-wide") {
-        min-height: 840px;
+        min-height: 880px;
     }
 
     @include media.bp("phablet") {
         min-height: 920px;
-    }
-
-    @include media.bp("tablet-small") {
-        height: 920px;
 
         &::before {
-            width: 80%;
-            left: 84px;
-            top: 140px;
-        }
-    }
-
-    @include media.bp("tablet-wide") {
-        &::before {
-            left: 120px;
+            height: 600px;
+            width: 600px;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 
@@ -59,6 +50,7 @@
             width: 50%;
             top: 0;
             left: auto;
+            transform: none;
             bottom: auto;
             margin-top: 60px;
             margin-right: 80px;
@@ -119,17 +111,14 @@
 }
 
 .action {
-    position: absolute;
-    bottom: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 24px;
+    margin-bottom: 24px;
 
     @include media.bp("tablet-small") {
         margin-bottom: 32px;
-        position: inherit;
-        bottom: auto;
     }
 
     @include media.bp("desktop") {
@@ -138,23 +127,8 @@
 }
 
 .builtby {
-    position: absolute;
-    bottom: 32px;
-    left: 10%;
-
-    @include media.bp("phone") {
-        left: 14%;
-    }
-    @include media.bp("phone-wide") {
-        left: 20%;
-    }
-    @include media.bp("phablet") {
-        left: 24%;
-    }
-
+    display: flex;
     @include media.bp("tablet-small") {
-        position: inherit;
-        bottom: auto;
     }
 }
 
