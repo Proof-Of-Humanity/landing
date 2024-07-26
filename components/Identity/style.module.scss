@@ -91,7 +91,6 @@
   display: flex;
   flex-direction: row;
   gap: 32px;
-  justify-content: space-between;
 
   @include media.bp("desktop") {
     flex-direction: column;
@@ -109,7 +108,7 @@
   p {
     color: colors.$text-secondary;
     margin: 0;
-    text-align: left;
+    text-align: center; 
   }
 
   .prosItem, .consItem {
@@ -117,6 +116,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
     min-height: 120px;
 
     @include media.bp("desktop") {
