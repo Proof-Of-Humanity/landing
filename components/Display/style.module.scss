@@ -32,13 +32,14 @@
   }
 
   @include media.bp("desktop") {
-    min-height: calc(100vh - 82px);
+    min-height: auto;
     height: auto;
     margin: 0 64px 64px;
     padding: 100px 0 132px 16px;
 
     &::before {
-      width: 50%;
+      height: 680px;
+      width: 680px;
       top: 0;
       left: auto;
       transform: none;
@@ -47,10 +48,6 @@
       margin-right: 80px;
       right: 0;
     }
-  }
-
-  @include media.bp("desktop-wide") {
-    padding: 100px 0 312px 128px;
   }
 }
 
