@@ -64,7 +64,6 @@
   }
 
   @include media.bp("desktop") {
-    align-items: flex-start;
     height: auto;
 
     .proscons {
