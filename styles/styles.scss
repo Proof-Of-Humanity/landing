@@ -43,10 +43,6 @@ nav {
   @include media.bp("desktop") {
     padding: 17px 80px;
   }
-
-  @include media.bp("desktop-wide") {
-    padding: 17px 192px;
-  }
 }
 
 footer {
