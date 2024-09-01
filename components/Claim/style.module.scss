@@ -8,6 +8,7 @@
 
     > img {
         width: 100%;
+        max-width: 840px;
         height: fit-content;
         padding: 12px;
         margin: auto;
@@ -15,7 +16,8 @@
 
     @include media.bp("desktop") {
         > img {
-            width: auto;
+            width: 48%;
+            max-width: 1200px;
             padding: 0;
             margin: auto;
         }
