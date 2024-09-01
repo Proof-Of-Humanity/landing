@@ -5,17 +5,17 @@
   display: flex;
   position: relative;
   width: 100%;
-  min-height: calc(748px + (180 * (100vw - 400px) / (560 - 360)));
+  min-height: calc(780px + (180 * (100vw - 400px) / (560 - 360)));
   padding: 0 16px;
 
   &::before {
     content: "";
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 90%;
     left: 51%;
     transform: translateX(-50%);
-    margin-top: 392px;
+    margin-top: 400px;
     z-index: -1;
     background-image: url("../../assets/poster.png");
     background-repeat: no-repeat;
@@ -23,11 +23,11 @@
   }
 
   @include media.bp("phablet") {
-    min-height: 920px;
+    min-height: 840px;
 
     &::before {
-      height: 600px;
-      width: 600px;
+      height: 440px;
+      width: 440px;
     }
   }
 
@@ -38,14 +38,14 @@
     padding: 100px 0 132px 16px;
 
     &::before {
-      height: 680px;
-      width: 680px;
+      height: 600px;
+      width: 600px;
       top: 0;
       left: auto;
       transform: none;
       bottom: auto;
-      margin-top: 60px;
-      margin-right: 80px;
+      margin-top: 48px;
+      margin-right: 140px;
       right: 0;
     }
   }

@@ -30,7 +30,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
       />
 
       <meta
-        content="https://app.proofofhumanity.id/images/open-graph-image.png"
+        content="/poh-v2-banner.png"
         property="og:image"
       />
 
@@ -40,7 +40,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
         property="x:description"
       />
       <meta
-        content="https://app.proofofhumanity.id/images/open-graph-image.png"
+        content="/poh-v2-banner.png"
         property="x:image"
       />
 
