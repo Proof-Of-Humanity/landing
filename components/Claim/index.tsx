@@ -17,7 +17,7 @@ const Claim: React.FC = () => (
         <span>Share POH with the world</span>
       </div>
       <Link
-        href="https://x.com/intent/tweet?text=%F0%9F%91%A5%20Join%20the%20Internet%20of%20Humans%21%0D%0ASubmit%20your%20profile%20on%20proofofhumanity.id%20to%20unlock%20your%20digital%20identity%20and%20earn%20%24UBI%20tokens%F0%9F%92%A7%0D%0A%23ProofOfHumanity%20%40Kleros_io%20%40DemocracyEarth&original_referer=https://proofofhumanity.id"
+        href="https://x.com/intent/post?text=Join%20the%20global%20%F0%9F%8C%8F%20community%20of%20verified%20humans%21%20%F0%9F%91%A5%20Get%20verified%20on%20proofofhumanity.id%20to%20secure%20your%20unique%20digital%20identity%20%F0%9F%AA%AA%20%23ProofOfHumanity%20%23Kleros&original_referer=https://proofofhumanity.id"
         target="_blank"
         className="linkButton"
       >
