@@ -1,6 +1,5 @@
 import "../styles/styles.scss";
 import type { AppProps } from "next/app";
-import { Open_Sans } from "@next/font/google";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -13,10 +12,8 @@ import TelegramLogo from "../assets/icons/telegram.svg";
 import SnapshotLogo from "../assets/icons/snapshot.svg";
 import Link from "next/link";
 
-const OpenSans = Open_Sans();
-
 const App: React.FC<AppProps> = ({ Component, pageProps }) => (
-  <div className={OpenSans.className}>
+  <div>
     <Head>
       <title>Proof of Humanity</title>
 
