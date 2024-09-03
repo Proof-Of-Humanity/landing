@@ -23,7 +23,12 @@ const Display: React.FC = () => {
         </p>
 
         <div className={style.action}>
-          <Link className="link-button" href="http://app.proofofhumanity.id">
+          <Link
+            className="link-button"
+            href="http://v2.proofofhumanity.id"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             Register Now
           </Link>
           <button onClick={() => setShowVideo(true)}>

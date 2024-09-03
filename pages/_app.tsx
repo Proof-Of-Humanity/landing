@@ -30,7 +30,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
       />
 
       <meta
-        content="/poh-v2-banner.png"
+        content="https://proofofhumanity.id/poh-v2-banner.png"
         property="og:image"
       />
 
@@ -40,7 +40,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
         property="x:description"
       />
       <meta
-        content="/poh-v2-banner.png"
+        content="https://proofofhumanity.id/poh-v2-banner.png"
         property="x:image"
       />
 
@@ -54,7 +54,11 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
     <nav>
       <Image src={POHV2LogoWithText} alt="proof of humanity" />
 
-      <Link href="http://app.proofofhumanity.id">
+      <Link
+        href="http://v2.proofofhumanity.id"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <button className="launch-button">Launch app</button>
       </Link>
     </nav>
