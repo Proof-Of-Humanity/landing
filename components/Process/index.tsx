@@ -58,7 +58,8 @@ const Process: React.FC = () => (
         <span>Learn More</span>
       </div>
       <Link
-        href="https://blog.kleros.io/proof-of-humanity-an-explainer/"
+        href="https://docs.kleros.io/products/proof-of-humanity"
+        rel="noopener noreferrer"
         target="_blank"
         className="linkButton"
       >
