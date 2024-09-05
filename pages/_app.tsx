@@ -31,18 +31,18 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
         property="og:image"
       />
 
-      <meta content="Proof Of Humanity" property="x:title" />
+      <meta content="Proof Of Humanity" property="twitter:title" />
       <meta
         content="A system combining social verification with video submission to create a Sybil-proof list of humans."
-        property="x:description"
+        property="twitter:description"
       />
       <meta
         content="https://proofofhumanity.id/poh-v2-banner.png"
-        property="x:image"
+        property="twitter:image"
       />
 
       <meta property="og:type" content="website" />
-      <meta content="summary_large_image" name="x:card" />
+      <meta content="summary_large_image" name="twitter:card" />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
 
       <link rel="icon" href="/favicon.ico" />
