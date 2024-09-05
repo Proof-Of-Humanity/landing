@@ -18,14 +18,18 @@ const Display: React.FC = () => {
         </h1>
 
         <p className={style.text}>
-          Proof of Humanity, a system combining webs of trust, with reverse
-          Turing tests, and dispute resolution to create a sybil-proof list of
-          humans.
+          Proof of Humanity is a system designed to create a trusted list of
+          humans verified by a decentralized community.
         </p>
 
         <div className={style.action}>
-          <Link className="link-button" href="http://app.proofofhumanity.id">
-            Create your profile
+          <Link
+            className="link-button"
+            href="http://v2.proofofhumanity.id"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Register Now
           </Link>
           <button onClick={() => setShowVideo(true)}>
             <Image src={PlayIcon} width="16" height="20" alt="play" />
@@ -46,6 +50,8 @@ const Display: React.FC = () => {
           <ReactPlayer
             url="https://www.youtube.com/watch?v=R4-z118s-gM"
             controls
+            width="68vw"
+            height="68vh"
           />
         </div>
       )}

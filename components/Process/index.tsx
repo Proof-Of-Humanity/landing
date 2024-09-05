@@ -1,8 +1,7 @@
-import SectionTitle from "../SectionTitle";
 import CreateIcon from "../../assets/icons/process/icon1.svg";
 import VouchIcon from "../../assets/icons/process/icon2.svg";
 import ChallengeIcon from "../../assets/icons/process/icon3.svg";
-import POHLogo from "../../assets/icons/logo.svg";
+import POHLogo from "../../assets/icons/orange-poh-v2-logo-no-text.svg";
 import Image, { StaticImageData } from "next/image";
 import style from "./style.module.scss";
 import Link from "next/link";
@@ -23,23 +22,33 @@ const Item: React.FC<ItemProps> = ({ icon, text, subtext }) => (
 
 const Process: React.FC = () => (
   <section className={style.main}>
-    <SectionTitle upper="How it" lower="Works" />
+    <h1 className={style.title}>
+      <strong>How It Works</strong>
+    </h1>
 
-    <div className={style.grid}>
+    <div className={style.cards}>
       <Item
         icon={CreateIcon}
         text="Create Your Profile"
-        subtext="Humans who wish to be included in the registry submit information about themselves serving for verification."
+        subtext="Join the growing list of verified humans.
+        Register now and claim your online
+        identity!"
       />
       <Item
         icon={VouchIcon}
         text="Vouch For People You Know"
-        subtext="Humans already in the registry can vouch for people registering. By vouching for someone, a user guarantees that the person he vouches for exists and is not a duplicate of another human."
+        subtext="Verified humans in the registry can vouch
+        for new registrants. By vouching, they
+        confirm the new user's existence and
+        ensure they are not a bot or duplicate."
       />
       <Item
         icon={ChallengeIcon}
         text="Challenge Suspicious Users"
-        subtext="Humans can challenge pending submissions that they think don't comply with the requirements for acceptance. When a submission is challenged, the decision goes to dispute resolution in an ERC792 compliant dispute resolution system like Kleros."
+        subtext="Challenge any pending submissions you
+        believe don't meet the requirements.
+        Challenged profiles will open a dispute in
+        the Kleros Humanity Court."
       />
     </div>
 
@@ -49,10 +58,12 @@ const Process: React.FC = () => (
         <span>Learn More</span>
       </div>
       <Link
-        href="https://blog.kleros.io/proof-of-humanity-an-explainer/"
+        href="https://docs.kleros.io/products/proof-of-humanity"
+        rel="noopener noreferrer"
         target="_blank"
+        className="linkButton"
       >
-        <button>Read the Guide</button>
+        <button>TUTORIALS</button>
       </Link>
     </div>
   </section>

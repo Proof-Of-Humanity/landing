@@ -1,12 +1,14 @@
+@use "@styles/colors";
 @use "@styles/media";
 
 .main {
     position: relative;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     background: linear-gradient(180deg, white 0%, hsla(30, 25%, 98%, 1) 50%);
 
     > img {
         width: 100%;
+        max-width: 840px;
         height: fit-content;
         padding: 12px;
         margin: auto;
@@ -14,9 +16,28 @@
 
     @include media.bp("desktop") {
         > img {
-            width: auto;
+            width: 48%;
+            max-width: 1200px;
             padding: 0;
             margin: auto;
         }
+        padding-bottom: 120px;
     }
+}
+
+.title {
+    color: colors.$primary;
+    padding-top: 40px;
+    margin-bottom: 20px;
+
+    @include media.bp("desktop") {
+        padding-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
+.guide {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }

@@ -1,0 +1,115 @@
+@use "@styles/colors";
+@use "@styles/media";
+
+.main {
+  position: relative;
+  margin-bottom: 52px;
+  padding-bottom: 60px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: colors.$launch-button-gradient;
+  }
+
+  @include media.bp("desktop") {
+    padding-bottom: 120px;
+    margin-bottom: 84px;
+  }
+}
+
+.title {
+  display: flex;
+  padding: 40px 40px 0 40px;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+
+  @include media.bp("phone-wide") {
+    width: 440px;
+  }
+
+  @include media.bp("phablet") {
+    width: 440px;
+  }
+
+  @include media.bp("desktop") {
+    width: 660px;
+    padding-top: 60px;
+  }
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin: 20px 32px;
+  color: white;
+  text-align: center;
+  flex-direction: column;
+
+  &.alignLeft {
+    flex-direction: column;
+
+    @include media.bp("desktop") {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+
+  &.alignRight {
+    flex-direction: column-reverse;
+
+    @include media.bp("desktop") {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+  }
+
+  &.alignRightMobile {
+    flex-direction: column;
+
+    @include media.bp("desktop") {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+  }
+
+  @include media.bp("desktop") {
+    margin: 40px 160px;
+  }
+}
+
+.featureTitle {
+  font-size: 28px;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1.2px white;
+  text-align: center;
+
+  @include media.bp("desktop") {
+    font-size: 36px;
+    -webkit-text-stroke: 1.5px white;
+    text-align: left;
+  }
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background-color: #9414fc;
+  margin: 20px 0;
+
+  @include media.bp("desktop") {
+    width: 4px;
+    height: 140px;
+    margin: 0 40px;
+  }
+}
+
+.featureDescription {
+  max-width: 700px;
+}

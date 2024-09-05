@@ -1,22 +1,19 @@
 import "../styles/styles.scss";
 import type { AppProps } from "next/app";
-import { Open_Sans } from "@next/font/google";
 import Head from "next/head";
 import Image from "next/image";
 
-import POHLogoWText from "../assets/icons/logo-wtext.svg";
+import POHV2LogoWithText from "../assets/icons/orange-poh-v2-logo-with-text.svg";
 import KlerosLogo from "../assets/icons/kleros.svg";
 
-import TwitterLogo from "../assets/icons/twitter.svg";
+import XLogo from "../assets/icons/x.svg";
 import GithubLogo from "../assets/icons/github.svg";
 import TelegramLogo from "../assets/icons/telegram.svg";
 import SnapshotLogo from "../assets/icons/snapshot.svg";
 import Link from "next/link";
 
-const OpenSans = Open_Sans();
-
 const App: React.FC<AppProps> = ({ Component, pageProps }) => (
-  <div className={OpenSans.className}>
+  <div>
     <Head>
       <title>Proof of Humanity</title>
 
@@ -30,32 +27,36 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
       />
 
       <meta
-        content="https://app.proofofhumanity.id/images/open-graph-image.png"
+        content="https://proofofhumanity.id/poh-v2-banner.png"
         property="og:image"
       />
 
-      <meta content="Proof Of Humanity" property="twitter:title" />
+      <meta content="Proof Of Humanity" property="x:title" />
       <meta
         content="A system combining social verification with video submission to create a Sybil-proof list of humans."
-        property="twitter:description"
+        property="x:description"
       />
       <meta
-        content="https://app.proofofhumanity.id/images/open-graph-image.png"
-        property="twitter:image"
+        content="https://proofofhumanity.id/poh-v2-banner.png"
+        property="x:image"
       />
 
       <meta property="og:type" content="website" />
-      <meta content="summary_large_image" name="twitter:card" />
+      <meta content="summary_large_image" name="x:card" />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
 
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
     <nav>
-      <Image src={POHLogoWText} alt="proof of humanity" />
+      <Image src={POHV2LogoWithText} alt="proof of humanity" />
 
-      <Link href="http://app.proofofhumanity.id">
-        <button>Launch app</button>
+      <Link
+        href="http://v2.proofofhumanity.id"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <button className="launch-button">Launch app</button>
       </Link>
     </nav>
 
@@ -63,7 +64,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
 
     <footer>
       <Image
-        src={POHLogoWText}
+        src={POHV2LogoWithText}
         width="134"
         height="48"
         alt="proof of humanity"
@@ -77,8 +78,8 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
       </span>
 
       <div className="logos">
-        <Link href="https://twitter.com/proofofhumanity" target="_blank">
-          <Image src={TwitterLogo} alt="twitter" />
+        <Link href="https://x.com/proofofhumanity" target="_blank">
+          <Image src={XLogo} alt="x" />
         </Link>
         <Link href="https://github.com/Proof-Of-Humanity" target="_blank">
           <Image src={GithubLogo} alt="github" />
