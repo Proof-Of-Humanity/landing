@@ -1,20 +1,11 @@
 import EtherscoreLogo from "@assets/icons/ecosystem/Etherscore.png";
-import FyreLogo from "@assets/icons/ecosystem/Fyre.png";
 import GalxeLogo from "@assets/icons/ecosystem/Galxe.png";
 import GitcoinLogo from "@assets/icons/ecosystem/Gitcoin.png";
 import GuildXYZLogo from "@assets/icons/ecosystem/Guild.xyz.png";
-import HypersignLogo from "@assets/icons/ecosystem/Hypersign.png";
-import LensLogo from "@assets/icons/ecosystem/Lens.png";
-import LensterLogo from "@assets/icons/ecosystem/Lenster.png";
-import MazuriLogo from "@assets/icons/ecosystem/Mazuri.png";
-import OrbisLogo from "@assets/icons/ecosystem/Orbis.png";
-import ProofOfIntegrityLogo from "@assets/icons/ecosystem/proof-of-integrity.png";
-import QLogo from "@assets/icons/ecosystem/Q.png";
-import RipioCreditLogo from "@assets/icons/ecosystem/ripio-credit.png";
 import SismoLogo from "@assets/icons/ecosystem/Sismo.png";
-import WallIDLogo from "@assets/icons/ecosystem/WallID.png";
+import QLogo from "@assets/icons/ecosystem/Q.png";
 import WeLookLogo from "@assets/icons/ecosystem/WeLook.png";
-import PlusIcon from "@assets/icons/plus.svg";
+import PrivadoLogo from "@assets/icons/ecosystem/privado_id.png";
 import POHLogo from "@assets/icons/poh-v2-logo-vertical.svg";
 import Image, { StaticImageData } from "next/image";
 import cn from "classnames";
@@ -47,26 +38,11 @@ const Ecosystem: React.FC = () => (
     </h1>
 
     <div className={style.grid}>
-      <div className={cn(style.side, style.left)}>
-        <Item logo={QLogo} alt="Q" link="https://q.org" />
-
-        <Item logo={SismoLogo} alt="Sismo" link="https://www.sismo.io" />
-        <Item logo={OrbisLogo} alt="Orbis" link="https://orbis.club" />
-        <Item logo={WeLookLogo} alt="WeLook" link="https://welook.io" />
-      </div>
-
+    {/* <div className={cn(style.side, style.left)}>
+        Items go here
+      </div> */}
       <div className={style.circular}>
         <Item logo={GitcoinLogo} alt="Gitcoin" link="https://gitcoin.co" />
-        <Item
-          logo={ProofOfIntegrityLogo}
-          alt="ProofOfIntegrity"
-          link="https://www.proofofintegrity.org"
-        />
-        <Item
-          logo={HypersignLogo}
-          alt="Hypersign"
-          link="https://hypersign.id"
-        />
         <Item
           logo={EtherscoreLogo}
           alt="Etherscore"
@@ -74,24 +50,16 @@ const Ecosystem: React.FC = () => (
         />
         <Item logo={GuildXYZLogo} alt="GuildXYZ" link="https://guild.xyz" />
         <Item logo={GalxeLogo} alt="Galxe" link="https://galxe.com" />
-        <Item logo={FyreLogo} alt="Fyre" link="https://fyre.id" />
-        <Item logo={WallIDLogo} alt="WallID" link="https://wallid.io" />
-        <Item
-          logo={RipioCreditLogo}
-          alt="RipioCredit"
-          link="https://rcn.finance"
-        />
-        <Item logo={LensLogo} alt="Lens" link="https://www.lens.xyz" />
-
+        <Item logo={SismoLogo} alt="Sismo" link="https://www.sismo.io" />
+        <Item logo={QLogo} alt="Q" link="https://q.org" />
+        <Item logo={WeLookLogo} alt="WeLook" link="https://welook.io" />
+        <Item logo={PrivadoLogo} alt="Privado" link="https://privado.id/" />
         <Item big logo={POHLogo} alt="Proof of Humanity" />
       </div>
 
-      <div className={cn(style.side, style.right)}>
-        <Item logo={MazuriLogo} alt="Mazuri" link="https://mazury.xyz" />
-        <Item logo={LensterLogo} alt="Lenster" link="https://lenster.xyz" />
-        <Item logo={PlusIcon} alt="Add yours" />
-        <Item logo={PlusIcon} alt="Add yours" />
-      </div>
+      {/* <div className={cn(style.side, style.right)}>
+        Items go here
+      </div> */}
     </div>
   </section>
 );

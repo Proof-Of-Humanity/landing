@@ -123,18 +123,16 @@
     margin: 36px 0;
     border-radius: 50%;
 
-    @include on-circle($item-count: 10, $circle-size: 316px, $item-size: 92px, $rotation: 288);
-    
+    @include on-circle($item-count: 8, $circle-size: 316px, $item-size: 92px, $rotation: 288);
     @include media.bp("tablet") {
         margin: 0 40px;
 
-        @include on-circle($item-count: 10, $circle-size: 316px, $item-size: 92px, $rotation: 270);
     }
 
     @include media.bp("desktop") {
         margin: 0 67px;
 
-        @include on-circle($item-count: 10, $circle-size: 475px, $item-size: 135px, $rotation: 270);
+        @include on-circle($item-count: 8, $circle-size: 475px, $item-size: 135px, $rotation: 288);
     }
 }
 
